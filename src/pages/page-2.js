@@ -2,11 +2,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import Image from '../components/image'
 
 const SecondPage = () => (
   <Layout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
+    <div style={{ maxWidth: '600px', marginBottom: '1.45rem' }}>
+      <Image />
+    </div>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
