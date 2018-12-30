@@ -3,23 +3,28 @@ import { Link } from 'gatsby'
 
 import { Section, Hero, Container, Heading } from 'react-bulma-components'
 import Layout from '../components/layout'
-import Image from '../components/image'
+import HeroImage from '../components/HeroImage'
 
 const IndexPage = () => (
   <Layout>
+    <Hero size='fullheight'>
+      <HeroImage/>
+      <Hero.Body >
+        <Container fluid className=' has-text-right'>
+
+          <Heading>
+            your health is our PRIORITY
+          </Heading>
+          <Heading subtitle size={4} renderAs="h2" className='cursive'>
+            some curvy polish text ^_^
+          </Heading>
+        </Container>
+      </Hero.Body>
+    </Hero>
     <Section>
-        <Hero>
-          <Hero.Body>
-            <Container>
-              <Heading>
-                ABOUT EDVICE
-              </Heading>
-              <Heading subtitle size={4}>
-                The first platform to connect patiensts and eating disorders specialists worldwide.
-              </Heading>
-            </Container>
-          </Hero.Body>
-        </Hero>
+        <Container>
+            <p>Hello some text here</p>
+        </Container>
     </Section>
     {/* <Link to="/page-2/">Go to page 2</Link> */}
   </Layout>
