@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "edvwebsite-20181230183941-authRole",
+            "UnauthRoleArn": "arn:aws:iam::331018689536:role/edvwebsite-20181230183941-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::331018689536:role/edvwebsite-20181230183941-authRole",
+            "Region": "eu-central-1",
+            "DeploymentBucketName": "edvwebsite-20181230183941-deployment",
+            "UnauthRoleName": "edvwebsite-20181230183941-unauthRole",
+            "StackName": "edvwebsite-20181230183941",
+            "StackId": "arn:aws:cloudformation:eu-central-1:331018689536:stack/edvwebsite-20181230183941/e37466f0-0c59-11e9-bd55-02625fbcaeee"
+        }
+    }
+}
