@@ -27,13 +27,8 @@ const HeroImage = () => (
       }
     `}
     render={data => <Img
-      style={{
-        position: "absolute",
-        left: '-20%',
-        top: 0,
-        width: "100%",
-        height: "100%"
-      }}
+      style={{position: 'absolute'}}
+      className='hero-bg'
       fluid={data.placeholderImage.childImageSharp.fluid} />}
   />
 )

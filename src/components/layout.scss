@@ -2,20 +2,34 @@
 
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Clicker+Script|Poiret+One|Work+Sans:900');
-
-// Update Bulma's global variables
-$family-sans-serif: 'Poiret One', cursive;
-$family-black: 'Work Sans', sans-serif;
-$family-cursive: 'Clicker Script', cursive;
-
-$family-title: $family-black;
-
+@import './variables.scss';
 @import '../../node_modules/bulma/bulma.sass';
 
-.title {
+@mixin font-title {
     font-family: $family-title;
     font-weight: 900;
 }
+
+.title {
+    @include font-title();
+}
 .cursive {
     font-family: $family-cursive;
+}
+.logo {
+    height: $navbar-height;
+}
+.navbar-item {
+    @include font-title();
+}
+.hero-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    @include tablet() {
+        left: -20%;
+        opacity: 1;
+    }
 }

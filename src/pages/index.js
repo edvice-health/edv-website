@@ -10,8 +10,7 @@ const IndexPage = () => (
     <Hero size='fullheight'>
       <HeroImage/>
       <Hero.Body >
-        <Container fluid className=' has-text-right'>
-
+        <Container className='has-text-right-tablet'>
           <Heading>
             your health is our PRIORITY
           </Heading>

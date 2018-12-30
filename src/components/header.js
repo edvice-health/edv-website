@@ -1,33 +1,38 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { Navbar } from 'react-bulma-components'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+import Logo from '../components/Logo'
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render () {
+    return (
+      <Navbar className="is-fixed-top">
+        <Navbar.Brand>
+          <Logo/>
+          <Navbar.Burger
+            active={this.state.open}
+            onClick={() => this.setState(state => ({ open: !state.open }))}
+          >
+          </Navbar.Burger>
+        </Navbar.Brand>
+        <Navbar.Menu active={this.state.open}>
+          <Navbar.Container>
+            <Navbar.Item href="#">Story</Navbar.Item>
+            <Navbar.Item href="#">Blog</Navbar.Item>
+            <Navbar.Item href="#">Program</Navbar.Item>
+            <Navbar.Item href="#">Contact</Navbar.Item>
+          </Navbar.Container>
+          <Navbar.Container position="end">
+          </Navbar.Container>
+        </Navbar.Menu>
+      </Navbar>
+    );
+  }
+}
 
 export default Header
