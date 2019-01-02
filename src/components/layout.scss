@@ -2,25 +2,35 @@
 
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Clicker+Script|Poiret+One|Work+Sans:900');
-@import './variables.scss';
-@import '../../node_modules/bulma/bulma.sass';
+
+@import '../~_variables.sass';
+@import '../../node_modules/bulma/sass/utilities/_all.sass';
+@import '../../node_modules/bulma/sass/base/_all.sass';
 
 @mixin font-title {
     font-family: $family-title;
     font-weight: 900;
 }
 
-.title {
-    @include font-title();
-}
 .cursive {
     font-family: $family-cursive;
 }
 .logo {
     height: $navbar-height;
 }
+.title {
+    @include font-title();
+    font-family: $family-title;
+}
 .navbar-item {
     @include font-title();
+    text-transform: uppercase;
+}
+.social-buttons {
+    position: fixed;
+    right: 0;
+    top: $navbar-height;
+
 }
 .hero-bg {
     position: absolute;
