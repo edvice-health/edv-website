@@ -1,7 +1,10 @@
 @import '../styles/_base.scss';
 
-.cursive {
+.font-cursive {
     font-family: $family-cursive;
+}
+.font-title {
+    @include font-title();
 }
 .logo {
     height: $navbar-height;
@@ -9,10 +12,6 @@
 .title {
     @include font-title();
     font-family: $family-title;
-}
-.navbar-item {
-    @include font-title();
-    text-transform: uppercase;
 }
 
 .section.social-buttons {
@@ -51,12 +50,13 @@
 
     line-height: $line-height;
     padding: 0 $padding;
+    text-transform: uppercase;
 
     &::after {
         content: "";
         display: block;
         margin: (-$line-height) (-$padding) 0;
-        width: 100%;
+        width: calc(100% + 2*$padding);
         padding-top: 100%;
         border: solid $black 2px;
     }

@@ -22,10 +22,10 @@ class Header extends React.Component {
         </Navbar.Brand>
         <Navbar.Menu>
           <Navbar.Container>
-            <Navbar.Item href="#story">Story</Navbar.Item>
-            <Navbar.Item href="#">Blog</Navbar.Item>
-            <Navbar.Item href="#">Program</Navbar.Item>
-            <Navbar.Item href="#">Contact</Navbar.Item>
+            <Navbar.Item className='is-uppercase font-title' href="#story">Story</Navbar.Item>
+            <Navbar.Item className='is-uppercase font-title' href="#">Blog</Navbar.Item>
+            <Navbar.Item className='is-uppercase font-title' href="#">Program</Navbar.Item>
+            <Navbar.Item className='is-uppercase font-title' href="#">Contact</Navbar.Item>
           </Navbar.Container>
           <Navbar.Container position="end">
           </Navbar.Container>

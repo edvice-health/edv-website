@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Section from 'react-bulma-components/lib/components/section'
 import Hero from 'react-bulma-components/lib/components/hero'
 import Container from 'react-bulma-components/lib/components/container'
 import Heading from 'react-bulma-components/lib/components/heading'
 import Columns from 'react-bulma-components/lib/components/columns'
+import Button from 'react-bulma-components/lib/components/button'
+import * as Form from 'react-bulma-components/lib/components/form';
 
 import Layout from '../components/layout'
 import HeroImage from '../components/HeroImage'
@@ -19,13 +20,13 @@ const IndexPage = () => (
           <Heading>
             your health is our PRIORITY
           </Heading>
-          <Heading subtitle size={4} renderAs="h2" className='cursive'>
+          <Heading subtitle size={4} renderAs="h2" className='font-cursive'>
             some curvy polish text ^_^
           </Heading>
         </Container>
       </Hero.Body>
     </Hero>
-    <Section id="story">
+    <Section size='fullheight' id="story">
       <Container>
         <Columns>
           <Columns.Column>
@@ -51,7 +52,48 @@ const IndexPage = () => (
         </Columns>
       </Container>
     </Section>
-    {/* <Link to="/page-2/">Go to page 2</Link> */}
+    <Section size='fullheight' id="contact">
+      <form url="#">
+        <Container>
+          <Columns>
+            <Columns.Column size="one-quarter">
+              <div className="story-column-title">
+                <Heading>Contact us.<br/>Get listed.</Heading>
+              </div>
+            </Columns.Column>
+            <Columns.Column >
+              <Columns>
+                <Columns.Column>
+                  <Form.Field>
+                    <Form.Label className="is-sr-only">Your name</Form.Label>
+                    <Form.Control>
+                      <Form.Input type="text" defaultValue='' placeholder="Your name"/>
+                    </Form.Control>
+                  </Form.Field>
+                </Columns.Column>
+                <Columns.Column>
+                  <Form.Field>
+                    <Form.Label className="is-sr-only">Your email</Form.Label>
+                    <Form.Control>
+                      <Form.Input type="email" defaultValue='' placeholder="Your email"/>
+                    </Form.Control>
+                  </Form.Field>
+                </Columns.Column>
+              </Columns>
+              <Form.Field>
+                <Form.Label className="is-sr-only">Message</Form.Label>
+                <Form.Control>
+                  <Form.Textarea placeholder="Write something here..." />
+                </Form.Control>
+              </Form.Field>
+            </Columns.Column>
+          </Columns>
+          <Button fullwidth={true} color='dark' size='large' className="font-title">
+            Submit.
+          </Button>
+        </Container>
+      </form>
+    </Section>
   </Layout>
 )
 
