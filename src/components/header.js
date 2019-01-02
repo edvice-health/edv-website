@@ -22,7 +22,7 @@ class Header extends React.Component {
         </Navbar.Brand>
         <Navbar.Menu>
           <Navbar.Container>
-            <Navbar.Item href="#">Story</Navbar.Item>
+            <Navbar.Item href="#story">Story</Navbar.Item>
             <Navbar.Item href="#">Blog</Navbar.Item>
             <Navbar.Item href="#">Program</Navbar.Item>
             <Navbar.Item href="#">Contact</Navbar.Item>

@@ -44,3 +44,23 @@
         opacity: 1;
     }
 }
+
+.story-column-title > .title {
+    $line-height: 3rem;
+    $padding: 0.5rem;
+
+    line-height: $line-height;
+    padding: 0 $padding;
+
+    &::after {
+        content: "";
+        display: block;
+        margin: (-$line-height) (-$padding) 0;
+        width: 100%;
+        padding-top: 100%;
+        border: solid $black 2px;
+    }
+}
+.story-column {
+    padding-top: 3rem;
+}
