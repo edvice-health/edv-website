@@ -1,0 +1,14 @@
+@import '../../styles/_utilities.scss';
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+
+    @include tablet() {
+        left: -20%;
+        opacity: 1;
+    }
+}

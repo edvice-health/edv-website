@@ -1,0 +1,19 @@
+@import '../../styles/_utilities.scss';
+
+.section.social-buttons {
+    position: fixed;
+    width: 100%;
+    top: $navbar-height;
+    right: -3rem; // large icon width
+    text-align: right;
+    padding-top: 0;
+    opacity: 0.5;
+    transition: opacity ease 0.1;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+.social-button {
+    display: block;
+}

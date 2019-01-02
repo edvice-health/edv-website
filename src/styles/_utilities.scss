@@ -1,0 +1,7 @@
+// Customize bulma variables
+@import './~_variables.sass';
+
+// Bulma variables, mixins, functions...
+@import '../../node_modules/bulma/sass/utilities/_all.sass';
+
+@import './_mixins.scss';

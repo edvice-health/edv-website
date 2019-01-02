@@ -2,6 +2,7 @@
 
 // Colors
 
+// Initial
 $black:        #272726;
 $black-bis:    hsl(0, 0%, 7%) !default
 $black-ter:    hsl(0, 0%, 14%) !default
@@ -16,16 +17,7 @@ $white-ter:    hsl(0, 0%, 96%) !default
 $white-bis:    hsl(0, 0%, 98%) !default
 $white:        hsl(0, 0%, 100%) !default
 
-$orange:       hsl(14,  100%, 53%) !default
-$yellow:       hsl(48,  100%, 67%) !default
-$green:        hsl(141, 71%,  48%) !default
-$turquoise:    hsl(171, 100%, 41%) !default
-$cyan:         hsl(204, 86%,  53%) !default
-$blue:         hsl(217, 71%,  53%) !default
-$purple:       hsl(271, 100%, 71%) !default
-$red:          hsl(348, 100%, 61%) !default
-
-// Edvice custom
+// Custom vars
 $dark-blue: #052A40;
 $turquoise: #19B2AF;
 $light-turquoise: #BEE1E0;
@@ -37,15 +29,30 @@ $mustard: #DEAB35;
 $text: $black;
 $background: $white;
 $link: $turquoise;
+$link-hover: $dark-blue;
+$link-visited: $turquoise;
+
+$primary: $turquoise;
+$info: $dark-blue;
+$success: $turquoise;
+$warning: $mustard;
+$danger: $coral;
+$light: $white;
+$dark: $black;
 
 // Typography
 
-$family-sans-serif: 'Poiret One', cursive;
+// Initial
+$family-sans-serif: 'Poiret One', sans-serif;
+$weight-bold: 900;
+
+// Custom vars
 $family-black: 'Work Sans', sans-serif;
 $family-cursive: 'Clicker Script', cursive;
+$family-tertiary: $family-cursive;
 
-$family-title: $family-black;
-$title-weight: 900;
+// Derived
+$family-secondary: $family-black;
 
 // Responsiveness
 
@@ -62,5 +69,14 @@ $widescreen-enabled: true !default
 $fullhd: 1344px + (2 * $gap) !default
 $fullhd-enabled: true !default
 
+// Navbar
+
 $navbar-breakpoint: $tablet;
-$navbar-height: 3.25rem
+$navbar-height: 3.25rem;
+$navbar-item-color: $black;
+$navbar-item-hover-color: $coral;
+
+// Title
+
+$title-weight: $weight-bold;
+$title-color: $black;

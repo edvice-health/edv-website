@@ -3,6 +3,8 @@ import Icon from 'react-bulma-components/lib/components/icon'
 import Container from 'react-bulma-components/lib/components/container'
 import Section from 'react-bulma-components/lib/components/section'
 
+import './styles.scss'
+
 const SocialButtons = () => (
     <Section className="social-buttons">
         <Container>

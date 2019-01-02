@@ -1,0 +1,9 @@
+@import '../../styles/_utilities.scss';
+
+.has-font-cursive {
+    font-family: $family-cursive;
+}
+.has-font-bold {
+    font-family: $family-black;
+    font-weight: $weight-bold;
+}

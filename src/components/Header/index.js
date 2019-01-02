@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Navbar from 'react-bulma-components/lib/components/navbar'
 
-import Logo from '../components/Logo'
+import Logo from '../Logo'
+import './styles.scss'
 
 class Header extends React.Component {
   constructor(props) {
@@ -22,10 +23,10 @@ class Header extends React.Component {
         </Navbar.Brand>
         <Navbar.Menu>
           <Navbar.Container>
-            <Navbar.Item className='is-uppercase font-title' href="#story">Story</Navbar.Item>
-            <Navbar.Item className='is-uppercase font-title' href="#">Blog</Navbar.Item>
-            <Navbar.Item className='is-uppercase font-title' href="#">Program</Navbar.Item>
-            <Navbar.Item className='is-uppercase font-title' href="#">Contact</Navbar.Item>
+            <Navbar.Item className='is-uppercase has-font-bold' href="#story">Story</Navbar.Item>
+            <Navbar.Item className='is-uppercase has-font-bold' href="#">Blog</Navbar.Item>
+            <Navbar.Item className='is-uppercase has-font-bold' href="#">Program</Navbar.Item>
+            <Navbar.Item className='is-uppercase has-font-bold' href="#contact">Contact</Navbar.Item>
           </Navbar.Container>
           <Navbar.Container position="end">
           </Navbar.Container>

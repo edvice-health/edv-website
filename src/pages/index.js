@@ -17,10 +17,10 @@ const IndexPage = () => (
       <HeroImage/>
       <Hero.Body >
         <Container className='has-text-centered has-text-right-tablet'>
-          <Heading>
+          <Heading className='has-font-bold'>
             your health is our PRIORITY
           </Heading>
-          <Heading subtitle size={4} renderAs="h2" className='font-cursive'>
+          <Heading subtitle size={4} renderAs="h2" className='has-font-cursive'>
             some curvy polish text ^_^
           </Heading>
         </Container>
