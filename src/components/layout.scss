@@ -1,16 +1,4 @@
-@charset "utf-8";
-
-// Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Clicker+Script|Poiret+One|Work+Sans:900');
-
-@import '../~_variables.sass';
-@import '../../node_modules/bulma/sass/utilities/_all.sass';
-@import '../../node_modules/bulma/sass/base/_all.sass';
-
-@mixin font-title {
-    font-family: $family-title;
-    font-weight: 900;
-}
+@import '../styles/_base.scss';
 
 .cursive {
     font-family: $family-cursive;
@@ -26,12 +14,25 @@
     @include font-title();
     text-transform: uppercase;
 }
-.social-buttons {
-    position: fixed;
-    right: 0;
-    top: $navbar-height;
 
+.section.social-buttons {
+    position: fixed;
+    width: 100%;
+    top: $navbar-height;
+    right: -3rem; // large icon width
+    text-align: right;
+    padding-top: 0;
+    opacity: 0.5;
+    transition: opacity ease 0.1;
+
+    &:hover {
+        opacity: 0.9;
+    }
 }
+.social-button {
+    display: block;
+}
+
 .hero-bg {
     position: absolute;
     top: 0;

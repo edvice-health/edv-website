@@ -14,7 +14,7 @@ const IndexPage = () => (
     <Hero size='fullheight'>
       <HeroImage/>
       <Hero.Body >
-        <Container  className='is-widescreen has-text-centered has-text-right-tablet'>
+        <Container className='has-text-centered has-text-right-tablet'>
           <Heading>
             your health is our PRIORITY
           </Heading>
