@@ -11,7 +11,7 @@ class Header extends React.Component {
   }
   render () {
     return (
-      <Navbar className="is-fixed-top">
+      <Navbar fixed='top' active={this.state.open}>
         <Navbar.Brand>
           <Logo/>
           <Navbar.Burger
@@ -20,7 +20,7 @@ class Header extends React.Component {
           >
           </Navbar.Burger>
         </Navbar.Brand>
-        <Navbar.Menu active={this.state.open}>
+        <Navbar.Menu>
           <Navbar.Container>
             <Navbar.Item href="#">Story</Navbar.Item>
             <Navbar.Item href="#">Blog</Navbar.Item>
