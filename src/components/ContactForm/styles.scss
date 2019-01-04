@@ -1,1 +1,16 @@
-//
+@import '../../styles/_utilities.scss';
+
+.contact-form-column {
+    padding-top: $column-title-line-height;
+    flex-direction: column;
+    display: flex;
+}
+.contact-form-field-message {
+    flex: 1;
+    & > .control {
+        height: 100%;
+        & > textarea {
+            height: 100%;
+        }
+    }
+}

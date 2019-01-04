@@ -2,7 +2,6 @@ import React from 'react'
 
 import Section from 'react-bulma-components/lib/components/section'
 import Container from 'react-bulma-components/lib/components/container'
-import Heading from 'react-bulma-components/lib/components/heading'
 import Columns from 'react-bulma-components/lib/components/columns'
 import Button from 'react-bulma-components/lib/components/button'
 import * as Form from 'react-bulma-components/lib/components/form';
@@ -12,11 +11,11 @@ import './styles.scss'
 
 const ContactForm = () => (
     <Section className='is-fullheight is-centered' id="contact">
-      <form url="#">
-        <Container>
-          <Columns>
-            <ColumnHeading>Contact us.<br/>Get listed.</ColumnHeading>
-            <Columns.Column >
+      <Container>
+        <form url="#">
+          <Columns className="is-tablet">
+            <ColumnHeading size='one-quarter'>Contact us.<br/>Get listed.</ColumnHeading>
+            <Columns.Column className='contact-form-column'>
               <Columns>
                 <Columns.Column>
                   <Form.Field>
@@ -35,7 +34,7 @@ const ContactForm = () => (
                   </Form.Field>
                 </Columns.Column>
               </Columns>
-              <Form.Field>
+              <Form.Field className='contact-form-field-message'>
                 <Form.Label className="is-sr-only">Message</Form.Label>
                 <Form.Control>
                   <Form.Textarea placeholder="Write something here..." />
@@ -43,11 +42,11 @@ const ContactForm = () => (
               </Form.Field>
             </Columns.Column>
           </Columns>
-          <Button fullwidth={true} color='dark' size='large' className="font-title">
+          <Button fullwidth={true} color='dark' size='large' className="has-font-bold">
             Submit.
           </Button>
-        </Container>
-      </form>
+        </form>
+      </Container>
     </Section>
 );
 

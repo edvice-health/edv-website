@@ -9,7 +9,7 @@ import './styles.scss'
 const Story = () => (
   <Section className='is-fullheight is-centered' id="story">
     <Container>
-      <Columns>
+      <Columns className="is-tablet">
         <ColumnHeading>The Company story.</ColumnHeading>
         <Columns.Column>
           <div className="story-column">

@@ -12,3 +12,8 @@
     display: flex;
     align-items: center;
 }
+
+// Fix for centered fullscreen section container width
+.is-centered > .container {
+    flex: 1;
+}

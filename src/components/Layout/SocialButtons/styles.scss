@@ -3,17 +3,26 @@
 .section.social-buttons {
     position: fixed;
     width: 100%;
-    top: $navbar-height;
-    right: -3rem; // large icon width
     text-align: right;
     padding-top: 0;
-    opacity: 0.5;
-    transition: opacity ease 0.1;
+    padding-bottom: 0;
+    opacity: 0.7;
+    transition: opacity ease 0.1s;
+    bottom: 0;
 
     &:hover {
         opacity: 0.9;
     }
+
+    @include widescreen() {
+        right: -3rem; // large icon width
+        top: $navbar-height;
+        bottom: auto;
+        opacity: 0.5;
+    }
 }
 .social-button {
-    display: block;
+    @include widescreen() {
+        display: block;
+    }
 }

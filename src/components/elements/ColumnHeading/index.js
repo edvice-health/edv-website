@@ -4,9 +4,9 @@ import Columns from 'react-bulma-components/lib/components/columns'
 
 import './styles.scss'
 
-const ColumnHeading = ({children, size="one-quarter"}) => (
-    <Columns.Column size={size}>
-      <Heading className='column-title'>{children}</Heading>
+const ColumnHeading = ({children, ...columnProps}) => (
+    <Columns.Column className='column-title' {...columnProps}>
+      <Heading  size={4} renderAs="h2">{children}</Heading>
     </Columns.Column>
 );
 
