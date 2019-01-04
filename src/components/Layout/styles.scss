@@ -8,24 +8,3 @@
 
 @import './_common.scss';
 @import './_icons.scss';
-
-.story-column-title > .title {
-    $line-height: 3rem;
-    $padding: 0.5rem;
-
-    line-height: $line-height;
-    padding: 0 $padding;
-    text-transform: uppercase;
-
-    &::after {
-        content: "";
-        display: block;
-        margin: (-$line-height) (-$padding) 0;
-        width: calc(100% + 2*$padding);
-        padding-top: 100%;
-        border: solid $black 2px;
-    }
-}
-.story-column {
-    padding-top: 3rem;
-}

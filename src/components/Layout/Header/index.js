@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Navbar from 'react-bulma-components/lib/components/navbar'
 
-import Logo from '../Logo'
+import Logo from './Logo'
 import './styles.scss'
 
 class Header extends React.Component {

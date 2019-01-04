@@ -7,3 +7,8 @@
     font-family: $family-black;
     font-weight: $weight-bold;
 }
+
+.is-centered {
+    display: flex;
+    align-items: center;
+}

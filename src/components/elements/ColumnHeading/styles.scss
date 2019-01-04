@@ -1,0 +1,22 @@
+@import '../../../styles/_utilities.scss';
+
+.column-title.title {
+    $line-height: $column-title-line-height;
+    $padding: $column-title-vertical-padding;
+
+    line-height: $line-height;
+    padding: 0 $padding;
+    text-transform: uppercase;
+
+    font-family: $family-black;
+    font-weight: $weight-bold;
+
+    &::after {
+        content: "";
+        display: block;
+        margin: (-$line-height) (-$padding) 0;
+        width: calc(100% + 2*$padding);
+        padding-top: 100%;
+        border: solid $title-color $column-title-border-width;
+    }
+}

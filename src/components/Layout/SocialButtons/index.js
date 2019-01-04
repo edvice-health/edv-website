@@ -16,7 +16,7 @@ const SocialButtons = () => (
 );
 
 const SocialButtonIcon = ({name, href = '#'}) => (
-    <a className="social-button" href="#">
+    <a className="social-button" href={href}>
         <Icon size="large">
             <span className={`icon-${name} is-large`}></span>
         </Icon>
