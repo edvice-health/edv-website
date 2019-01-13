@@ -9,7 +9,7 @@ import ContactForm from '../components/ContactForm'
 const IndexPage = ({ data }) => (
   <Layout>
     <Hero data={data.contentfulHero}/>
-    <Story/>
+    <Story data={data.contentfulStory}/>
     <ContactForm/>
   </Layout>
 )
@@ -26,6 +26,12 @@ export const query = graphql`
                     srcSet
                 }
             }
+        }
+        contentfulStory {
+            title
+            column1 { childMarkdownRemark { html } }
+            column2 { childMarkdownRemark { html } }
+            column3 { childMarkdownRemark { html } }
         }
     }
 `

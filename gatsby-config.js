@@ -44,5 +44,6 @@ module.exports = {
         accessToken: '23ece3b631708055f13539915ceb958cf8e79c7fe8f36ee5508b6e19cbecd7f0',
       },
     },
+    'gatsby-transformer-remark',
   ],
 }
