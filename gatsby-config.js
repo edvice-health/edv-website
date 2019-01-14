@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: 'Edvice',
@@ -40,8 +42,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: 'yrv6l71p3dd6',
-        accessToken: '23ece3b631708055f13539915ceb958cf8e79c7fe8f36ee5508b6e19cbecd7f0',
+        spaceId: process.env.CONTENTFUL_SPACE_ID || '',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
       },
     },
     'gatsby-transformer-remark',

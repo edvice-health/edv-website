@@ -36,6 +36,7 @@
     "publish": "gatsby build && amplify publish"
   },
   "devDependencies": {
+    "dotenv": "^6.2.0",
     "prettier": "^1.14.2"
   },
   "repository": {
