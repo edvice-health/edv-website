@@ -16,6 +16,11 @@ const Layout = ({ children }) => (
             title
           }
         }
+        contentfulLinks {
+            facebook
+            instagram
+            youtube
+        }
       }
     `}
     render={data => (
@@ -30,7 +35,7 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header/>
-        <SocialButtons/>
+        <SocialButtons data={data.contentfulLinks}/>
         {children}
       </>
     )}
