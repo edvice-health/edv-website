@@ -20,7 +20,7 @@ export const query = graphql`
             id
             profession
             category
-            desctiption {
+            description {
               childMarkdownRemark { html }
             }
             picture {

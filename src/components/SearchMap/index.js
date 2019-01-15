@@ -1,9 +1,11 @@
 import React from 'react'
+import GoogleMapReact from 'google-map-react';
 import Section from 'react-bulma-components/lib/components/section'
 import Container from 'react-bulma-components/lib/components/container'
 import Heading from 'react-bulma-components/lib/components/heading'
 import Card from 'react-bulma-components/lib/components/card';
 import Media from 'react-bulma-components/lib/components/media';
+import Icon from 'react-bulma-components/lib/components/icon'
 import Content from 'react-bulma-components/lib/components/content';
 import * as Form from 'react-bulma-components/lib/components/form';
 
@@ -49,9 +51,9 @@ function filter(specialists, {query}) {
 
 function Results ({ specialists }) {
   return (
-    <Container className=''>
+    <Container>
       { specialists.map((node) => (
-        <Card key={node.id}>
+        <Card className='specialist-card' key={node.id}>
           <Card.Content>
             <Media>
               <Media.Item renderAs="figure" position="left" size={64}>
@@ -62,12 +64,34 @@ function Results ({ specialists }) {
                 <Heading subtitle size={6}>{node.profession}</Heading>
               </Media.Item>
             </Media>
-            <Content dangerouslySetInnerHTML={{__html: node.desctiption.childMarkdownRemark.html}} />
+            <Content dangerouslySetInnerHTML={{__html: node.description.childMarkdownRemark.html}} />
+            <Map {...node.location} />
           </Card.Content>
         </Card>
       ))}
     </Container>
   );
 }
+
+const Map = ({lat, lon}) => (
+   <GoogleMapReact
+      bootstrapURLKeys={{ key: process.env.GOOGLE_API_KEY }}
+      defaultCenter={{lat, lon}}
+      defaultZoom={1}
+      style={{
+        height: '12rem',
+        width: '100%',
+        position: 'relative'
+      }}
+    >
+      <Marker lat={lat} lng={lon} />
+    </GoogleMapReact>
+);
+
+const Marker = () => (
+  <Icon size="large">
+    <span className='icon-map-marker is-large'></span>
+  </Icon>
+);
 
 export default SearchMap;
